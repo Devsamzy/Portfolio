@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+  body{
+    background: #44454A;
+    color: white;
+    text-align: center
+  }
+    #head{
+      display:flex;
+   
+   font-size:40px;
+   
+    }
+   p{
+     padding: 0px;
+     margin: auto;
+     transition:5s
+   }
+   #angel,#devil{
+     margin-top: 100px
+     ;
+     border: white solid 1px;
+     border-radius: 10px;
+     transition: 5s
+   }
+   #finger{
+     text-align: center;
+     transition:5s;
+   }
+   #spot{
+     border: solid #44454A;
+     height: 100px;
+     width: 70px;
+     margin: auto;
+     border-radius: 30%;
+     background: #55E71B;
+     margin-top: 40px;
+     transition: 1s;
+     box-shadow: 0 0 19px #623C77
+   }
+   #spot:hover{
+     background:red;
+     
+   }
+   button{
+     font-size: 30px;
+     background: #2082CB;
+     border: none;
+     outline: none;
+     border-radius: 10px;
+     padding: 10px;
+     margin-top:30px;
+     box-shadow:5px 5px 5px green
+   }
+  </style>
+</head>
+
+<body>
+<div id="head">
+  <p>
+    Angel
+  </p>
+  <p>
+    Devil
+  </p>
+</div>
+<div id="head">
+  <p id="angel">
+    0
+  </p>
+  <p id="devil">
+    0
+  </p>
+</div>
+<div id="finger" onmouseover="calc()">
+  <h1>
+    finger print
+  </h1>
+  <p>place your finger</p>
+  <div id="spot"></div>
+  <p id="show"></p><br>
+  <br>
+  
+</div>
+<button type="reset">try agian</button>
+</body>
+<script>
+  function calc(){
+    var mark=document.getElementById('angel');
+    var ran=Math.floor(Math.random()*100);
+    mark.innerHTML=ran+'%';
+    var sec=100-ran;
+    document.getElementById('devil').innerHTML=sec+'%';
+    
+    if(ran>sec){
+      alert('u are an angel')
+     
+    }
+     else {
+     alert('booooo');
+     
+     }
+  }
+</script>
+
+</html>
